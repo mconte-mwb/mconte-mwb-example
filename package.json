@@ -10,7 +10,9 @@
     "ts:check": "npx tsc",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "doctor": "npx expo-doctor@latest"
+    "doctor": "npx expo-doctor@latest",
+    "storybook-generate": "sb-rn-get-stories",
+    "storybook-watch": "sb-rn-watcher"
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.3",
@@ -45,5 +47,8 @@
   "resolutions": {
     "react-refresh": "~0.14.0"
   },
-  "private": true
+  "private": true,
+  "engines": {
+    "node": ">=18 <19"
+  }
 }
