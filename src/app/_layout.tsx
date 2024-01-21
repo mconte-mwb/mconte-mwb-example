@@ -1,3 +1,5 @@
+import 'react-native-gesture-handler';
+
 import { GluestackUIProvider } from '@gluestack-ui/themed';
 import { ThemeProvider } from '@react-navigation/native';
 import { config } from 'config/gluestack-ui.config';

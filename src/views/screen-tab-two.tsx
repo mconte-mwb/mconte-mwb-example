@@ -1,30 +1,35 @@
-import { Button, ButtonText, Center, Divider, HStack, Text, VStack } from '@gluestack-ui/themed';
-import { router } from 'expo-router';
+import { Button, ButtonText, Divider, Heading, HStack, VStack } from '@gluestack-ui/themed';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { SwipeableFlatList } from '@/components';
 
 function ScreenTabTwo() {
+  const insets = useSafeAreaInsets();
   return (
-    <Center flex={1} px="$4">
-      <VStack alignItems="center" gap="$4">
-        <Text>Tab Two</Text>
-        {/* I don't know, added HStack, also putting w='$full' did not worked */}
-        <HStack>
-          <Divider />
-        </HStack>
-        <Text>Something!</Text>
-        <HStack>
-          <Divider />
-        </HStack>
-        <Button onPress={() => router.push('/')}>
-          <ButtonText>go to index</ButtonText>
-        </Button>
-        <HStack>
-          <Divider />
-        </HStack>
-        <Button onPress={() => router.push('/modal')}>
-          <ButtonText>go to modal</ButtonText>
-        </Button>
-      </VStack>
-    </Center>
+    <SwipeableFlatList
+      contentContainerStyle={{ paddingTop: insets.top, paddingBottom: insets.bottom }}
+      data={[1, 2, 3, 4, 5]}
+      ItemSeparatorComponent={Divider}
+      renderItem={({ item }) => {
+        return (
+          <VStack $dark-bg="$black" bg="$white" p="$4">
+            <Heading>Number {item}</Heading>
+          </VStack>
+        );
+      }}
+      renderRightActions={() => {
+        return (
+          <HStack>
+            <Button action="positive" h="$full">
+              <ButtonText>positive action</ButtonText>
+            </Button>
+            <Button action="negative" h="$full">
+              <ButtonText>negative action</ButtonText>
+            </Button>
+          </HStack>
+        );
+      }}
+    />
   );
 }
 
