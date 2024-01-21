@@ -18,8 +18,7 @@ SplashScreen.preventAutoHideAsync();
 
 function RootLayout() {
   const { isLoading: isLoadingFont } = useRobotoFonts();
-  const rawColorScheme = useColorScheme();
-  const colorScheme = rawColorScheme === 'dark' ? 'dark' : 'light';
+  const { colorScheme } = useColorScheme();
 
   useEffect(() => {
     if (!isLoadingFont) {
