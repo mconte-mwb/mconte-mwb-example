@@ -24,6 +24,12 @@ module.exports = {
       },
     },
     {
+      files: ['./app.config.ts'],
+      rules: {
+        '@typescript-eslint/consistent-type-imports': ['off'],
+      },
+    },
+    {
       files: ['*.ts', '*.tsx', '*.d.ts'],
 
       parserOptions: {

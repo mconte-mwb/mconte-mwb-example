@@ -1,8 +1,8 @@
 import 'ts-node/register';
-import { type ExpoConfig } from 'expo/config';
+import { ExpoConfig } from 'expo/config';
 
 const config: ExpoConfig = {
-  name: 'mconte-mwb-example',
+  name: 'mconte',
   slug: 'mconte-mwb-example',
   version: '1.0.0',
   orientation: 'portrait',
@@ -26,15 +26,15 @@ const config: ExpoConfig = {
       backgroundColor: '#ffffff',
     },
   },
-  web: {
-    bundler: 'metro',
-    output: 'static',
-    favicon: './assets/images/favicon.png',
-  },
   plugins: ['expo-router'],
   experiments: {
     tsconfigPaths: true,
     typedRoutes: true,
+  },
+  extra: {
+    eas: {
+      projectId: 'ec41a61c-8d50-4273-afeb-6e53be52651e',
+    },
   },
 };
 
