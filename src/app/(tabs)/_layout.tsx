@@ -2,18 +2,10 @@ import { Link, Tabs } from 'expo-router';
 import { CodeIcon, InfoIcon } from 'lucide-react-native';
 import { Pressable } from 'react-native';
 
-import { useColorScheme } from '@/components/useColorScheme';
-import Colors from '@/constants/Colors';
-
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
         headerShown: true,
       }}>
       <Tabs.Screen

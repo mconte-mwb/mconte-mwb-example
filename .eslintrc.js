@@ -11,6 +11,19 @@ module.exports = {
   ],
   overrides: [
     {
+      files: ['./config/theme/**/*'],
+      rules: {
+        '@typescript-eslint/ban-ts-comment': 'off',
+      },
+    },
+    {
+      files: ['./config/gluestack-ui.config.ts'],
+      rules: {
+        '@typescript-eslint/consistent-type-definitions': 'off',
+        '@typescript-eslint/no-empty-interface': 'off',
+      },
+    },
+    {
       files: ['*.ts', '*.tsx', '*.d.ts'],
 
       parserOptions: {
