@@ -1,11 +1,12 @@
-import { Center, Divider, Text } from '@gluestack-ui/themed';
+import { OptimizedScreen } from '@/components';
+import { ScreenTabTwo as ScreenTabTwoComponent } from '@/views';
 
-export default function TabTwoScreen() {
+function ScreenTabTwo() {
   return (
-    <Center flex={1}>
-      <Text>Tab Two</Text>
-      <Divider />
-      <Text>Mauro Conte</Text>
-    </Center>
+    <OptimizedScreen>
+      <ScreenTabTwoComponent />
+    </OptimizedScreen>
   );
 }
+
+export default ScreenTabTwo;

@@ -1,8 +1,8 @@
+import { Pressable } from '@gluestack-ui/themed';
 import { Link, Tabs } from 'expo-router';
 import { CodeIcon, InfoIcon } from 'lucide-react-native';
-import { Pressable } from 'react-native';
 
-export default function TabLayout() {
+function TabLayout() {
   return (
     <Tabs
       screenOptions={{
@@ -15,7 +15,9 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <CodeIcon color={color} />,
           headerRight: () => (
             <Link asChild={true} href="/modal">
-              <Pressable>{({ pressed }) => <InfoIcon />}</Pressable>
+              <Pressable>
+                <InfoIcon />
+              </Pressable>
             </Link>
           ),
         }}
@@ -30,3 +32,5 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+
+export default TabLayout;

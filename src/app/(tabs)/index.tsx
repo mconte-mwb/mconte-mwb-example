@@ -1,11 +1,12 @@
-import { Center, Divider, Text } from '@gluestack-ui/themed';
+import { OptimizedScreen } from '@/components';
+import { ScreenTabOne as ScreenTabOneComponent } from '@/views';
 
-export default function TabOneScreen() {
+function ScreenTabOne() {
   return (
-    <Center flex={1}>
-      <Text>Tab One</Text>
-      <Divider />
-      <Text>Something!</Text>
-    </Center>
+    <OptimizedScreen>
+      <ScreenTabOneComponent />
+    </OptimizedScreen>
   );
 }
+
+export default ScreenTabOne;

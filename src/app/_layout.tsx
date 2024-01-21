@@ -7,21 +7,17 @@ import { useEffect } from 'react';
 
 import { useColorScheme, useRobotoFonts } from '@/hooks';
 
-export {
-  // Catch any errors thrown by the Layout component.
-  ErrorBoundary,
-} from 'expo-router';
-
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
+  initialRouteName: 'index',
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
+function RootLayout() {
   const { isLoading: isLoadingFont } = useRobotoFonts();
+  const colorScheme = useColorScheme();
 
   useEffect(() => {
     if (!isLoadingFont) {
@@ -32,12 +28,6 @@ export default function RootLayout() {
   if (isLoadingFont) {
     return null;
   }
-
-  return <RootLayoutNav />;
-}
-
-function RootLayoutNav() {
-  const colorScheme = useColorScheme();
 
   return (
     <GluestackUIProvider colorMode={colorScheme === 'dark' ? 'dark' : 'light'} config={config}>
@@ -50,3 +40,5 @@ function RootLayoutNav() {
     </GluestackUIProvider>
   );
 }
+
+export default RootLayout;
