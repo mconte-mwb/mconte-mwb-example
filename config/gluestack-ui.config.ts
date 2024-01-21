@@ -143,9 +143,9 @@ const gluestackUIConfig = createConfig({
       black: '900',
     },
     fonts: {
-      heading: undefined,
-      body: undefined,
-      mono: undefined,
+      heading: 'Roboto',
+      body: 'Roboto',
+      mono: 'Roboto',
     },
     fontSizes: {
       '2xs': 10,
