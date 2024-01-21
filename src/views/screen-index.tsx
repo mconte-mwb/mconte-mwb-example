@@ -11,6 +11,9 @@ function ScreenIndex() {
       <Button onPress={() => router.push('/(tabs)/one')}>
         <ButtonText>go to tabs</ButtonText>
       </Button>
+      <Button onPress={() => router.push('/public/page')}>
+        <ButtonText>go to public</ButtonText>
+      </Button>
     </VStack>
   );
 }

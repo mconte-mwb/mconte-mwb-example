@@ -37,7 +37,7 @@ function RootLayout() {
       <ThemeProvider value={navigationTheme[colorScheme]}>
         <Stack screenOptions={{ headerShown: false }}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ headerShown: false, presentation: 'modal' }} />
+          <Stack.Screen name="a-modal" options={{ headerShown: false, presentation: 'modal' }} />
         </Stack>
       </ThemeProvider>
     </GluestackUIProvider>
