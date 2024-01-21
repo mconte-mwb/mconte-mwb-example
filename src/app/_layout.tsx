@@ -33,9 +33,9 @@ function RootLayout() {
   return (
     <GluestackUIProvider colorMode={colorScheme} config={config}>
       <ThemeProvider value={navigationTheme[colorScheme]}>
-        <Stack>
+        <Stack screenOptions={{ headerShown: false }}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+          <Stack.Screen name="modal" options={{ headerShown: false, presentation: 'modal' }} />
         </Stack>
       </ThemeProvider>
     </GluestackUIProvider>

@@ -1,12 +1,28 @@
-import { Center, Divider, Text } from '@gluestack-ui/themed';
+import { Button, ButtonText, Divider, HStack, Text, VStack } from '@gluestack-ui/themed';
+import { router } from 'expo-router';
 
 function ScreenTabOne() {
   return (
-    <Center flex={1}>
+    <VStack alignItems="center" flex={1} gap="$4" justifyContent="center" px="$4">
       <Text>Tab One</Text>
-      <Divider />
+      {/* I don't know, added HStack, also putting w='$full' did not worked */}
+      <HStack>
+        <Divider />
+      </HStack>
       <Text>Something!</Text>
-    </Center>
+      <HStack>
+        <Divider />
+      </HStack>
+      <Button onPress={() => router.push('/')}>
+        <ButtonText>go to index</ButtonText>
+      </Button>
+      <HStack>
+        <Divider />
+      </HStack>
+      <Button onPress={() => router.push('/modal')}>
+        <ButtonText>open modal</ButtonText>
+      </Button>
+    </VStack>
   );
 }
 

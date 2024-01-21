@@ -1,12 +1,17 @@
-import { Center, Heading } from '@gluestack-ui/themed';
-import { Link } from 'expo-router';
+import { Divider, HStack, Button, ButtonText, Heading, VStack } from '@gluestack-ui/themed';
+import { router } from 'expo-router';
 
 function ScreenIndex() {
   return (
-    <Center flex={1}>
+    <VStack alignItems="center" flex={1} gap="$4" justifyContent="center" px="$4">
       <Heading>EntryScreen</Heading>
-      <Link href="/(tabs)">TABS</Link>
-    </Center>
+      <HStack>
+        <Divider />
+      </HStack>
+      <Button onPress={() => router.push('/(tabs)/one')}>
+        <ButtonText>go to tabs</ButtonText>
+      </Button>
+    </VStack>
   );
 }
 
