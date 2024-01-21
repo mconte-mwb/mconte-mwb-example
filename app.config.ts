@@ -28,7 +28,6 @@ const config: ExpoConfig = {
   },
   plugins: ['expo-router'],
   experiments: {
-    tsconfigPaths: true,
     typedRoutes: true,
   },
   extra: {
