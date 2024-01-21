@@ -12,7 +12,8 @@
     "lint:fix": "eslint . --fix",
     "doctor": "npx expo-doctor@latest",
     "storybook-generate": "sb-rn-get-stories",
-    "storybook-watch": "sb-rn-watcher"
+    "storybook-watch": "sb-rn-watcher",
+    "start:storybook": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start"
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.3",

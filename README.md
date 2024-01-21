@@ -7,11 +7,10 @@ tested with node v18.19.0
 # install and run
 
 ```
-yarn && yarn start
+# install
+yarn
+# run
+yarn start
+# run storybook
+yarn start:storybook
 ```
-
-# environment
-
-Through `.env` file you can enable/disable storybook using `EXPO_PUBLIC_STORYBOOK_ENABLED`.
-
-See `.env.example` for more details.
