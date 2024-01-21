@@ -20,7 +20,7 @@ export const unstable_settings = {
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const {isLoading: isLoadingFont} = useRobotoFonts();
+  const { isLoading: isLoadingFont } = useRobotoFonts();
 
   useEffect(() => {
     if (!isLoadingFont) {

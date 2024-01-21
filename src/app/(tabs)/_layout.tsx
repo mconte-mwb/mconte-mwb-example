@@ -1,10 +1,9 @@
 import { Link, Tabs } from 'expo-router';
+import { CodeIcon, InfoIcon } from 'lucide-react-native';
 import { Pressable } from 'react-native';
 
-import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
-import { CodeIcon, InfoIcon } from 'lucide-react-native';
-
+import Colors from '@/constants/Colors';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -23,12 +22,8 @@ export default function TabLayout() {
           title: 'Tab One',
           tabBarIcon: ({ color }) => <CodeIcon color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <InfoIcon />
-                )}
-              </Pressable>
+            <Link asChild={true} href="/modal">
+              <Pressable>{({ pressed }) => <InfoIcon />}</Pressable>
             </Link>
           ),
         }}

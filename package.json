@@ -8,11 +8,15 @@
   "scripts": {
     "start": "npx expo start",
     "ts:check": "npx tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "doctor": "npx expo-doctor@latest"
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.3",
     "@react-navigation/native": "^6.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-universe": "^12.0.0",
     "expo": "~49",
     "expo-linking": "~5.0.2",
     "expo-router": "^2.0.0",
@@ -21,6 +25,7 @@
     "expo-system-ui": "~2.4.0",
     "expo-web-browser": "~12.3.2",
     "lucide-react-native": "^0.312.0",
+    "prettier": "^3.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.6",
@@ -31,7 +36,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@types/react": "~18.2.45",
+    "@types/react": "~18.2.14",
+    "ts-node": "^10.9.2",
     "typescript": "^5.1.3"
   },
   "resolutions": {
