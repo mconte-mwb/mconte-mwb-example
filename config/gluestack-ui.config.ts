@@ -141,7 +141,6 @@ const gluestackUIConfig = createConfig({
       bold: '700',
       extrabold: '800',
       black: '900',
-      extraBlack: '950',
     },
     fonts: {
       heading: undefined,

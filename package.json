@@ -18,6 +18,7 @@
     "@expo-google-fonts/roboto": "^0.2.3",
     "@gluestack-style/react": "^1.0.41",
     "@gluestack-ui/themed": "^1.0.37",
+    "@react-native-async-storage/async-storage": "1.18.2",
     "@react-navigation/native": "^6.0.2",
     "eslint": "^8.56.0",
     "eslint-config-universe": "^12.0.0",
@@ -40,6 +41,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@storybook/core-common": "^7.6.6",
+    "@storybook/react-native": "^6.5.6",
     "@types/react": "~18.2.14",
     "ts-node": "^10.9.2",
     "typescript": "^5.1.3"
