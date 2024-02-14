@@ -1,40 +1,28 @@
-import 'ts-node/register';
-import { ExpoConfig } from 'expo/config';
+import 'ts-node/register'; // Add this to import TypeScript files
 
-const config: ExpoConfig = {
-  name: 'mconte',
-  slug: 'mconte-mwb-example',
+import { type ConfigContext, type ExpoConfig } from 'expo/config';
+
+const baseIdentifier = 'com.mconte.mwb.example';
+
+/**
+ * increment `version.version` to allow a new Apple Store submission
+ * increment `version.versionCode` to allow a new Play Store submission
+ */
+const version = {
   version: '1.0.0',
-  orientation: 'portrait',
-  icon: './assets/images/icon.png',
-  scheme: 'mconte',
-  userInterfaceStyle: 'automatic',
-  splash: {
-    image: './assets/images/splash.png',
-    resizeMode: 'contain',
-    backgroundColor: '#ffffff',
-  },
-  assetBundlePatterns: ['**/*'],
-  ios: {
-    supportsTablet: true,
-    bundleIdentifier: 'com.mconte.mwb.example',
-  },
-  android: {
-    package: 'com.mconte.mwb.example',
-    adaptiveIcon: {
-      foregroundImage: './assets/images/adaptive-icon.png',
-      backgroundColor: '#ffffff',
-    },
-  },
-  plugins: ['expo-router'],
-  experiments: {
-    typedRoutes: true,
-  },
-  extra: {
-    eas: {
-      projectId: 'ec41a61c-8d50-4273-afeb-6e53be52651e',
-    },
-  },
+  versionCode: 1,
 };
 
-export default config;
+/**
+ * @see https://docs.expo.dev/workflow/configuration/#configuration-resolution-rules
+ */
+export default function getExpoAppConfig({ config }: ConfigContext): ExpoConfig {
+  config.version = version.version;
+  config.android!.versionCode = version.versionCode;
+
+  config.android = Object.assign({}, config.android, { package: baseIdentifier });
+
+  config.ios = Object.assign({}, config.ios, { bundleIdentifier: baseIdentifier });
+
+  return config as ExpoConfig;
+}
