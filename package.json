@@ -55,5 +55,6 @@
   "private": true,
   "engines": {
     "node": ">=18 <19"
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }
