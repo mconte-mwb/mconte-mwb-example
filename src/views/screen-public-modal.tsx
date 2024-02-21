@@ -6,11 +6,11 @@ import { Platform } from 'react-native';
 function ScreenPublicModal() {
   return (
     <VStack alignItems="center" flex={1} gap="$4" justifyContent="center" px="$4">
-      <Text>Public Modal Screen</Text>
+      <Text>Public Modal Screen 2</Text>
       <HStack>
         <Divider />
       </HStack>
-      <Text>Modal Screen</Text>
+      <Text>Modal Screen 2</Text>
       <HStack>
         <Divider />
       </HStack>

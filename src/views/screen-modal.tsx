@@ -6,11 +6,11 @@ import { Platform } from 'react-native';
 function ScreenModal() {
   return (
     <VStack alignItems="center" flex={1} gap="$4" justifyContent="center" px="$4">
-      <Text>Modal Screen</Text>
+      <Text>Modal Screen 1</Text>
       <HStack>
         <Divider />
       </HStack>
-      <Text>Modal Screen</Text>
+      <Text>Modal Screen 1</Text>
       <HStack>
         <Divider />
       </HStack>

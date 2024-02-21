@@ -8,7 +8,7 @@ function ScreenPublicPage() {
       <HStack>
         <Divider />
       </HStack>
-      <Text>Modal Screen</Text>
+      <Text>Public Page</Text>
       <HStack>
         <Divider />
       </HStack>
